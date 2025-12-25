@@ -1,33 +1,81 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'About';
-const description = 'About your blog.';
+const title = 'About Grace Community Church';
+const description = 'Learn about our history, beliefs, pastor, and mission to love God and serve others.';
 const permalink = `${Astro.site.href}about`;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="about">
   <div class="container">
-    <h1>About</h1>
+    <h1>About Grace Community Church</h1>
+    
     <figure class="about-image">
-      <img src="/assets/about-illustration.webp" alt="Illustration of a notebook" width="330">
+      <img src="https://svg.undraw.co/undraw_inspirational.svg" alt="Illustration of a diverse community inspired and growing in faith" width="330">
       <figcaption>
         Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
+        <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">unDraw</a>
       </figcaption>
     </figure>
-    <p>Text placeholder via <a href="https://jeffsum.com/" target="_blank">Jeffsum</a>.</p>
-    <p>So you two dig up, dig up dinosaurs? What do they got in there? King Kong? My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard! Life finds a way. God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs.</p>
-    <p>You really think you can fly that thing? You know what? It is beets. I've crashed into a beet truck. Forget the fat lady! You're obsessed with the fat lady! Drive us out of here! Is this my espresso machine? Wh-what is-h-how did you get my espresso machine?</p>
-    <p>Hey, you know how I'm, like, always trying to save the planet? Here's my chance. Hey, take a look at the earthlings. Goodbye! I was part of something special. Just my luck, no ice. You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?</p>
-    <p>Jaguar shark! So tell me - does it really exist? This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Yes, Yes, without the oops! You're a very talented young man, with your own clever thoughts and ideas. Do you need a manager?</p>
-    <p>Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose. They're using our own satellites against us. And the clock is ticking. Do you have any idea how long it takes those cups to decompose. My dad once told me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>
+    
+    <section>
+      <h2>Our History</h2>
+      <p>Grace Community Church was founded in 1995 by a small group of families with a shared vision: to create a welcoming place where people from all walks of life could encounter God's grace, grow in faith, and build lasting relationships. Over the years, we've grown into a vibrant congregation while staying true to our roots in Bible-centered teaching and community outreach.</p>
+    </section>
+    
+    <section>
+      <h2>Our Beliefs</h2>
+      <p>We are a Bible-believing church that affirms the core truths of Christianity:</p>
+      <ul>
+        <li>The Bible is the inspired and authoritative Word of God.</li>
+        <li>There is one God, eternally existing in three persons: Father, Son, and Holy Spirit.</li>
+        <li>Jesus Christ is the Son of God, born of a virgin, who lived a sinless life, died for our sins, and rose again.</li>
+        <li>Salvation is by grace through faith in Jesus Christ alone.</li>
+        <li>We are called to love God with all our heart and to love our neighbors as ourselves.</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Our Pastor</h2>
+      <p>Pastor John Smith has been leading Grace Community Church for over 15 years. With a Master's degree in Theology and a passion for practical, life-applicable preaching, Pastor John is dedicated to helping people connect God's Word to everyday challenges. He and his wife, Sarah, have three children and love welcoming new faces into our church family.</p>
+    </section>
+    
+    <section>
+      <h2>Our Mission</h2>
+      <p>To glorify God by:</p>
+      <ul>
+        <li><strong>Worshiping</strong> Him together in spirit and truth.</li>
+        <li><strong>Growing</strong> as disciples through Bible study, prayer, and fellowship.</li>
+        <li><strong>Serving</strong> our local community with compassion and generosity.</li>
+        <li><strong>Sharing</strong> the good news of Jesus Christ locally and around the world.</li>
+      </ul>
+      <p>We support missions in Africa, local food pantries, youth mentoring programs, and more. If you're looking for a place to belong, we'd love to have you join us!</p>
+    </section>
   </div>
 </BaseLayout>
 
 <style>
+  .container section {
+    margin-bottom: 3em;
+  }
+
+  .container h2 {
+    font-size: 1.8em;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    color: #333;
+  }
+
+  .container ul {
+    list-style: disc inside;
+    padding-left: 1em;
+    font-size: 1.1em;
+  }
+
+  .container li {
+    margin-bottom: 0.8em;
+  }
+
   .about-image {
     float: right;
     margin: -3em -7em 2em 2em;
@@ -37,12 +85,16 @@ const permalink = `${Astro.site.href}about`;
   .about-image img {
     border-radius: 8px;
     margin-bottom: 1.5em;
+    width: 100%;
+    height: auto;
   }
 
   @media (max-width: 1020px) {
     .about-image {
       float: none;
       margin: 0 auto 2em;
+      max-width: 400px;
+      text-align: center;
     }
   }
 </style>
