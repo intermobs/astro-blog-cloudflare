@@ -1,107 +1,131 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'About WTLT';
-const description = 'Learn about our history, beliefs, pastor, and mission to love God and serve others.';
-const permalink = `${Astro.site.href}about`;
+const title = 'WTLT';
+const description = 'A welcoming community dedicated to loving God, loving others, and growing in faith.';
+const permalink = Astro.site.href;
 ---
 
-<BaseLayout title={title} description={description} permalink={permalink} current="about">
-  <div class="container">
-    <h1>About Grace Community Church</h1>
-    
-    <figure class="about-image">
-      <img src="https://svg.undraw.co/undraw_inspirational.svg" alt="Illustration of a diverse community inspired and growing in faith" width="330">
-      <figcaption>
+<BaseLayout title={title} description={description} permalink={permalink}>
+  <div class="home-container">
+    <div class="home-copy">
+      <h1>WAY TRUTH AND LIFE TABERNACLE</h1>
+      <p>We are a vibrant family of believers committed to worship, fellowship, and sharing the hope of Jesus Christ. Whether you're exploring faith or looking for a church home, you belong here.</p>
+      <p>Join us this Sunday!</p>
+      
+      <div class="service-times">
+        <h2>Service Times</h2>
+        <ul>
+          <li><strong>Sunday Worship:</strong> 10:00 AM</li>
+          <li><strong>Tuesdays & Thursdays Prayer:</strong> 5:30 PM</li>
+          <li><strong>Radio Program:</strong> Thursday at 11:00 AM</li>
+        </ul>
+      </div>
+      
+      <p>Learn more <a href="/about">about us</a> or check out recent <a href="/blog">sermons</a>.</p>
+    </div>
+
+    <div class="hero-image-container">
+      <picture>
+        <source srcset="https://svg.undraw.co/undraw_community_re_cyrm.svg" media="(min-width: 600px)" type="image/svg+xml">
+        <img class="hero-image" alt="Illustration of a diverse community gathering in fellowship" src="https://svg.undraw.co/undraw_community_re_cyrm.svg" width="550" height="466">
+      </picture>
+      <p class="caption">
         Illustration by
         <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">unDraw</a>
-      </figcaption>
-    </figure>
-    
-    <section>
-      <h2>Our History</h2>
-      <p>Grace Community Church was founded in 1995 by a small group of families with a shared vision: to create a welcoming place where people from all walks of life could encounter God's grace, grow in faith, and build lasting relationships. Over the years, we've grown into a vibrant congregation while staying true to our roots in Bible-centered teaching and community outreach.</p>
-    </section>
-    
-    <section>
-      <h2>Our Beliefs</h2>
-      <p>We are a Bible-believing church that affirms the core truths of Christianity:</p>
-      <ul>
-        <li>The Bible is the inspired and authoritative Word of God.</li>
-        <li>There is one God, eternally existing in three persons: Father, Son, and Holy Spirit.</li>
-        <li>Jesus Christ is the Son of God, born of a virgin, who lived a sinless life, died for our sins, and rose again.</li>
-        <li>Salvation is by grace through faith in Jesus Christ alone.</li>
-        <li>We are called to love God with all our heart and to love our neighbors as ourselves.</li>
-      </ul>
-    </section>
-    
-    <section>
-      <h2>Our Pastor</h2>
-      <p>Pastor John Smith has been leading Grace Community Church for over 15 years. With a Master's degree in Theology and a passion for practical, life-applicable preaching, Pastor John is dedicated to helping people connect God's Word to everyday challenges. He and his wife, Sarah, have three children and love welcoming new faces into our church family.</p>
-    </section>
-    
-    <section>
-      <h2>Our Mission</h2>
-      <p>To glorify God by:</p>
-      <ul>
-        <li><strong>Worshiping</strong> Him together in spirit and truth.</li>
-        <li><strong>Growing</strong> as disciples through Bible study, prayer, and fellowship.</li>
-        <li><strong>Serving</strong> our local community with compassion and generosity.</li>
-        <li><strong>Sharing</strong> the good news of Jesus Christ locally and around the world.</li>
-      </ul>
-      <p>We support missions in Africa, local food pantries, youth mentoring programs, and more. If you're looking for a place to belong, we'd love to have you join us!</p>
-    </section>
+      </p>
+    </div>
   </div>
 </BaseLayout>
 
 <style>
-  :root {
-    --heading-color: #333; /* Light mode default */
+  .home-container {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 2em 0;
+    min-height: 400px;
   }
 
-  .dark {
-    --heading-color: #f0f0f0; /* Light color for dark mode - adjust to match your theme's text */
+  .home-copy {
+    flex: 1;
+    padding: 0 1em;
   }
 
-  .container section {
-    margin-bottom: 3em;
+  .home-copy h1 {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    line-height: 1.3;
   }
 
-  .container h2 {
-    font-size: 1.8em;
-    margin-top: 1.5em;
-    margin-bottom: 0.8em;
-    color: var(--heading-color);
+  .home-copy p {
+    font-size: 1.4em;
   }
 
-  .container ul {
-    list-style: disc inside;
-    padding-left: 1em;
-    font-size: 1.1em;
+  .service-times {
+    margin: 2em 0;
   }
 
-  .container li {
-    margin-bottom: 0.8em;
+  .service-times h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
   }
 
-  .about-image {
-    float: right;
-    margin: -3em -7em 2em 2em;
-    max-width: 300px;
+  .service-times ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
   }
 
-  .about-image img {
-    border-radius: 8px;
-    margin-bottom: 1.5em;
+  .service-times li {
+    margin-bottom: 0.5em;
+  }
+
+  .hero-image-container {
+    margin: 0 1em;
+    text-align: center;
+  }
+
+  .hero-image-container picture {
+    display: block;
+    min-height: 250px;
+  }
+
+  .caption {
+    font-size: .8em;
+    font-style: italic;
+    text-align: left;
+  }
+
+  .hero-image {
     width: 100%;
-    height: auto;
+    max-width: 550px;
+    margin-bottom: 1em;
   }
 
-  @media (max-width: 1020px) {
-    .about-image {
-      float: none;
-      margin: 0 auto 2em;
+  @media (max-width: 1200px) {
+    .home-copy p {
+      font-size: 1.2em;
+    }
+
+    .hero-image {
       max-width: 400px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .home-container {
+      flex-direction: column;
+    }
+
+    .home-copy {
+      flex: 0;
+      padding-bottom: 2em;
+      text-align: center;
+    }
+
+    .service-times {
       text-align: center;
     }
   }
