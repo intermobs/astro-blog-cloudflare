@@ -16,41 +16,60 @@ const permalink = `${Astro.site.href}about`;
       </figcaption>
     </figure>
     
+    <h2>Who We Are</h2>
     <p>
-      Our church is a Christ–centered, Spirit–led ministry based in Nhlangano, Eswatini. 
-      We are a family of believers committed to worship, prayer, discipleship, and sharing 
-      the message of Jesus Christ with our community and beyond.
+      Way Truth and Life Tabernacle is a Christ–centered, Spirit–led ministry based in Nhlangano, Eswatini. 
+      We are a loving family of believers committed to worship, prayer, discipleship, and sharing 
+      the message of Jesus Christ with our community and beyond. 
+      Our desire is to see lives transformed through the power of the Gospel.
+    </p>
+
+    <h2>Our History</h2>
+    <p>
+      The ministry was founded under the leadership of 
+      <strong>Apostle D Dlamini</strong>, who carries a deep passion for seeing lives restored and 
+      rooted in Christ. From humble beginnings, the church has grown into a spiritually vibrant 
+      community focused on teaching the Word of God and serving with compassion and integrity.
+    </p>
+   <figure class="section-image">
+      <img src="/assets/church-1.webp" alt="Church fellowship" width="330">
+      <figcaption>Worship and fellowship together in Christ</figcaption>
+    </figure>
+
+    <h2>What We Believe</h2>
+    <p>
+      We believe in the full Gospel of Jesus Christ — salvation, healing, deliverance, and spiritual growth 
+      through the Word of God and the work of the Holy Spirit. Our mission is to raise believers who 
+      know God personally, walk in His purpose, and live out their faith daily with boldness and love.
+    </p>
+
+    <h2>Our Pastor</h2>
+    <p>
+      <strong>Apostle D Dlamini</strong> serves is the senior pastor and founder of the church. 
+      He is devoted to preaching truth, guiding believers, and shepherding God’s people with humility, care, and prophetic grace. 
+      His ministry emphasizes prayer, holiness, faith, and a deeper walk with Christ.
+    </p>
+    <figure class="section-image">
+      <img src="/assets/about-illustration.webp" alt="Illustration of a notebook" width="330">
+      <figcaption>Our Founder — Apostle D Den</figcaption>
+    </figure>
+
+    <h2>Our Community</h2>
+    <p>
+      We welcome people of all ages and backgrounds to worship and grow with us. 
+      Whether you are seeking a church home, spiritual guidance, or a place to encounter the presence of God, 
+      you are invited to join us in fellowship.
     </p>
 
     <p>
-      The ministry was founded under the leadership of <strong><a href="https://jeffsum.com/" target="_blank">Apostle D. Dlamini</a></strong>, 
-      who carries a deep passion for seeing lives transformed by the power of God. 
-      Through teaching, prophecy, deliverance, and pastoral care, Apostle Den continues to 
-      guide the church with wisdom, humility, and a heart for God’s people.
+      Our services include Sunday worship, weekly prayer gatherings, Bible teaching, youth ministry, and 
+      community outreach programs dedicated to uplifting Nhlangano and surrounding areas.
     </p>
-
+    
+   <h2>Join Us</h2>
     <p>
-      Our vision is to raise believers who know God personally, walk in His purpose, 
-      and live out their faith daily. We believe in the full gospel of Jesus Christ — 
-      salvation, healing, restoration, and spiritual growth through the Word of God 
-      and the work of the Holy Spirit.
-    </p>
-    <p>
-      We welcome people of all ages and backgrounds to fellowship with us. 
-      Whether you are seeking a church home, spiritual guidance, or a place to 
-      encounter the presence of God, you are invited to join us in worship and fellowship.
-    </p>
-
-    <p>
-      Our services include Sunday worship, weekly prayer and teaching gatherings, 
-      youth and family ministry, and community outreach programs aimed at 
-      supporting and uplifting our local community in Nhlangano and surrounding areas.
-    </p>
-
-    <p>
-      We believe the church is more than a building — it is a living family of faith, 
-      hope, and love. We look forward to welcoming you and walking with you on 
-      your spiritual journey.
+      We believe the church is more than a building — it is a living family of faith, hope, and love. 
+      We look forward to welcoming you and walking with you on your spiritual journey.
     </p>
   </div>
   
@@ -66,6 +85,21 @@ const permalink = `${Astro.site.href}about`;
   .about-image img {
     border-radius: 8px;
     margin-bottom: 1.5em;
+  }
+ 
+ .section-image {
+    margin: 2em 0;
+    text-align: center;
+  }
+
+  .section-image img {
+    border-radius: 8px;
+    max-width: 330px;
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 2em;
   }
 
   @media (max-width: 1020px) {
