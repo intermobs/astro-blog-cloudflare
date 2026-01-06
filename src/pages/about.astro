@@ -1,26 +1,21 @@
---- 
+ --- 
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Bio from '../../components/Bio.astro';
 
 const title = 'About';
-const description = 'About our church and ministry.';
+const description = 'About your blog.';
 const permalink = `${Astro.site.href}about`;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="about">
   <div class="container">
-    <h1>About Our Church</h1>
-
+    <h1>About Us</h1>
     <figure class="about-image">
       <img src="/assets/about-illustration.webp" alt="Illustration of a notebook" width="330">
       <figcaption>
-        Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
+        Way Truth and Life Tabernacle, Nhlangano.
       </figcaption>
     </figure>
-
+    
     <p>
       Our church is a Christ–centered, Spirit–led ministry based in Nhlangano, Eswatini. 
       We are a family of believers committed to worship, prayer, discipleship, and sharing 
@@ -28,7 +23,7 @@ const permalink = `${Astro.site.href}about`;
     </p>
 
     <p>
-      The ministry was founded under the leadership of <strong>Apostle D Den</strong>, 
+      The ministry was founded under the leadership of <strong><a href="https://jeffsum.com/" target="_blank">Apostle D. Dlamini</a></strong>, 
       who carries a deep passion for seeing lives transformed by the power of God. 
       Through teaching, prophecy, deliverance, and pastoral care, Apostle Den continues to 
       guide the church with wisdom, humility, and a heart for God’s people.
@@ -40,7 +35,6 @@ const permalink = `${Astro.site.href}about`;
       salvation, healing, restoration, and spiritual growth through the Word of God 
       and the work of the Holy Spirit.
     </p>
-
     <p>
       We welcome people of all ages and backgrounds to fellowship with us. 
       Whether you are seeking a church home, spiritual guidance, or a place to 
@@ -59,11 +53,7 @@ const permalink = `${Astro.site.href}about`;
       your spiritual journey.
     </p>
   </div>
-
-  <div class="container">
-    <hr />
-    <Bio />
-  </div>
+  
 </BaseLayout>
 
 <style>
